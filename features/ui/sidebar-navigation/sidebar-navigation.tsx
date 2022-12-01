@@ -195,7 +195,13 @@ export function SidebarNavigation() {
               text="Support"
               iconSrc="/icons/support.svg"
               isCollapsed={isSidebarCollapsed}
-              onClick={() => alert("Support")}
+              onClick={() => {
+                const supportEmail = "support@prolog-app.com";
+                const subject = "Support Request:";
+
+                document.location =
+                  "mailto:" + supportEmail + "?subject=" + subject;
+              }}
             />
             <CollapseMenuItem
               text="Collapse"
